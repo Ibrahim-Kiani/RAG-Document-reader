@@ -4,6 +4,8 @@ This is a simple, modularized RAG (Retrieval-Augmented Generation) application t
 
 ## Features
 
+- **Document Upload:** Upload your own PDF documents directly through the Streamlit UI.
+- **Streamlit UI:** Interactive and user-friendly interface for chatting with your documents.
 - **Modular Design:** The code is separated into modules for configuration, data loading, and chat logic.
 - **Extensible:** Easily add new data sources or change the LLM model.
 - **History-Aware:** The chatbot remembers the conversation history to answer follow-up questions.
@@ -38,13 +40,13 @@ This is a simple, modularized RAG (Retrieval-Augmented Generation) application t
 
 ### Usage
 
-To start the chat application, run the following command:
+To start the Streamlit application, run the following command:
 
 ```bash
-python main.py
+streamlit run app/streamlit_app.py
 ```
 
-You can then ask questions about the LangChain paper, and the chatbot will do its best to answer them.
+Open your web browser and navigate to the address provided by Streamlit (usually `http://localhost:8501`). You can then upload a PDF document and start asking questions.
 
 ## Project Structure
 
@@ -55,15 +57,15 @@ app/
     chat.py
     config.py
     data_loader.py
-main.py
+    streamlit_app.py
 rag_db/
     ...
 README.md
 requirements.txt
 ```
 
-- **`main.py`**: The entry point of the application.
 - **`app/`**: Contains the core application logic.
+  - **`streamlit_app.py`**: The main Streamlit application file.
   - **`config.py`**: Stores configuration variables.
   - **`data_loader.py`**: Handles loading and processing the data.
   - **`chat.py`**: Manages the chat logic and RAG chain.
@@ -73,5 +75,4 @@ requirements.txt
 ## Customization
 
 - **Change the LLM:** Modify the `LLM_MODEL` variable in `app/config.py`.
-- **Use a different document:** Change the `PDF_URL` in `app/config.py`.
 - **Adjust the chunking strategy:** Modify the `CHUNK_SIZE` and `CHUNK_OVERLAP` variables in `app/config.py`.

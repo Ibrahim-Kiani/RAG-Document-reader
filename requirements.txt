@@ -5,3 +5,4 @@ ollama
 sentence-transformers
 pypdf
 tiktoken
+streamlit

@@ -3,16 +3,15 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-from app.config import (
-    PDF_URL,
+from config import (
     CHUNK_SIZE,
     CHUNK_OVERLAP,
     EMBEDDING_MODEL,
     PERSIST_DIRECTORY,
 )
 
-def load_and_embed_documents():
-    docs = PyPDFLoader(PDF_URL).load()
+def load_and_embed_documents(pdf_path):
+    docs = PyPDFLoader(pdf_path).load()
     chunks = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP
     ).split_documents(docs)

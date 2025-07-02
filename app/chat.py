@@ -6,7 +6,7 @@ from langchain.chains import (
 )
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
-from app.config import LLM_MODEL, CONDENSE_PROMPT_SYSTEM, ANSWER_PROMPT_SYSTEM
+from config import LLM_MODEL, CONDENSE_PROMPT_SYSTEM, ANSWER_PROMPT_SYSTEM
 
 def create_rag_chain(vectordb):
     llm = Ollama(model=LLM_MODEL)
@@ -24,7 +24,7 @@ def create_rag_chain(vectordb):
             ("system", ANSWER_PROMPT_SYSTEM),
             MessagesPlaceholder("chat_history"),
             ("system", "Relevant context:\n{context}"),
-            ("user", "{question}"),
+            ("user", "{input}"),
         ]
     )
 
