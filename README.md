@@ -20,8 +20,8 @@ This is a simple, modularized RAG (Retrieval-Augmented Generation) application t
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Ibrahim-Kiani/RAG-Document-reader.git
+   cd RAG-Document-reader
    ```
 
 2. **Install the dependencies:**
