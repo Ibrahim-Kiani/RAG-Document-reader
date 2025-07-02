@@ -2,6 +2,12 @@
 
 This is a simple, modularized RAG (Retrieval-Augmented Generation) application that uses LangChain and Ollama to answer questions about a document.
 
+---
+
+## Streamlit UI
+
+![Interface](image.webp)
+
 ## Features
 
 - **Document Upload:** Upload your own PDF documents directly through the Streamlit UI.
